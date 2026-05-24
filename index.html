@@ -204,7 +204,24 @@ const CONVS=[
     ]
   },
   {
-    title:'Conversation 2 — Coffee Shop',img:'img2.jpg',audio:'audio2.mp3',
+    title:'Conversation 2 — Wifi & Computers',img:'img2.jpg',audio:'audio2.mp3',
+    text:[
+      {role:'Man',line:'What a beautiful day!'},
+      {role:'Woman',line:'Yes, the weather is perfect.'},
+      {role:'Man',line:'How is the wifi speed?'},
+      {role:'Woman',line:"It's fast, but my computer is slow."},
+      {role:'Man',line:"My computer is slow, too. It's very old. I want a new one."},
+      {role:'Woman',line:'Me, too, but new computers are so expensive.'},
+      {role:'Man',line:'I know. They cost a lot.'},
+    ],
+    questions:[
+      {q:'How is the weather?',opts:["Hot and rainy","Bad and cold","Perfect","Windy and cloudy"],ans:2},
+      {q:"How is the woman's computer?",opts:["Fast and new","Slow","Expensive and fast","Perfect"],ans:1},
+      {q:'Why do they not buy new computers?',opts:["They are too big","They do not need one","They are very expensive","The shop is closed"],ans:2},
+    ]
+  },
+  {
+    title:'Conversation 3 — Coffee Shop',img:'img3.jpg',audio:'audio3.mp3',
     text:[
       {role:'Woman',line:'Hello, can I help you?'},
       {role:'Man',line:'Yes, can I have a cafe mocha?'},
@@ -222,23 +239,6 @@ const CONVS=[
       {q:'What does the man order?',opts:["Hot mocha","Iced mocha","Cold tea","Hot latte"],ans:1},
       {q:'What size does the man choose?',opts:["Small","Medium","Large","Extra large"],ans:2},
       {q:'How does the man react to the price?',opts:["He thinks it is cheap","He thinks it is OK","He thinks it is expensive","He does not care"],ans:2},
-    ]
-  },
-  {
-    title:'Conversation 3 — Wifi & Computers',img:'img3.jpg',audio:'audio3.mp3',
-    text:[
-      {role:'Man',line:'What a beautiful day!'},
-      {role:'Woman',line:'Yes, the weather is perfect.'},
-      {role:'Man',line:'How is the wifi speed?'},
-      {role:'Woman',line:"It's fast, but my computer is slow."},
-      {role:'Man',line:"My computer is slow, too. It's very old. I want a new one."},
-      {role:'Woman',line:'Me, too, but new computers are so expensive.'},
-      {role:'Man',line:'I know. They cost a lot.'},
-    ],
-    questions:[
-      {q:'How is the weather?',opts:["Hot and rainy","Bad and cold","Perfect","Windy and cloudy"],ans:2},
-      {q:"How is the woman's computer?",opts:["Fast and new","Slow","Expensive and fast","Perfect"],ans:1},
-      {q:'Why do they not buy new computers?',opts:["They are too big","They do not need one","They are very expensive","The shop is closed"],ans:2},
     ]
   },
   {
@@ -277,19 +277,7 @@ const PUZZLES=[
     ]
   },
   {
-    title:'Conversation 2 — Coffee Shop',audio:'audio2.mp3',
-    bank:['sweet','size','Large','expensive','cheap','little'],
-    lines:[
-      {pre:'Man: Is it ',word:'sweet',post:'?'},
-      {pre:'Woman: Yes, a ',word:'little',post:'.'},
-      {pre:'Woman: What ',word:'size',post:' do you want?'},
-      {pre:'Man: ',word:'Large',post:', please.'},
-      {pre:"Man: That's ",word:'expensive',post:'!'},
-      {pre:"Woman: It's not ",word:'cheap',post:'.'},
-    ]
-  },
-  {
-    title:'Conversation 3 — Wifi & Computers',audio:'audio3.mp3',
+    title:'Conversation 2 — Wifi & Computers',audio:'audio2.mp3',
     bank:['perfect','speed','fast','slow','old','expensive','cost','beautiful'],
     lines:[
       {pre:'Man: What a ',word:'beautiful',post:' day!'},
@@ -301,6 +289,18 @@ const PUZZLES=[
       {pre2:'',word2:'old',post2:'.'},
       {pre:'Woman: New computers are so ',word:'expensive',post:'.'},
       {pre:'Man: They ',word:'cost',post:' a lot.'},
+    ]
+  },
+  {
+    title:'Conversation 3 — Coffee Shop',audio:'audio3.mp3',
+    bank:['sweet','size','Large','expensive','cheap','little'],
+    lines:[
+      {pre:'Man: Is it ',word:'sweet',post:'?'},
+      {pre:'Woman: Yes, a ',word:'little',post:'.'},
+      {pre:'Woman: What ',word:'size',post:' do you want?'},
+      {pre:'Man: ',word:'Large',post:', please.'},
+      {pre:"Man: That's ",word:'expensive',post:'!'},
+      {pre:"Woman: It's not ",word:'cheap',post:'.'},
     ]
   },
   {
@@ -463,8 +463,8 @@ function buildPanels(){
       <div class="vimeo-wrap"><iframe src="https://player.vimeo.com/video/950476834" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
       <ul class="conv-list">
         <li>🏫 Conversation 1 — Classes</li>
-        <li>☕ Conversation 2 — Coffee Shop</li>
-        <li>💻 Conversation 3 — Wifi & Computers</li>
+        <li>💻 Conversation 2 — Wifi & Computers</li>
+        <li>☕ Conversation 3 — Coffee Shop</li>
         <li>🍽️ Conversation 4 — Lunch</li>
       </ul>
     </div>
